@@ -10,4 +10,5 @@ public class SpringBootBootstrapProjectApplication {
 		SpringApplication.run(SpringBootBootstrapProjectApplication.class, args);
 	}
 
+
 }
