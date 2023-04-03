@@ -1,3 +1,10 @@
+
+# Spefify repositiry and tag for Spring Boot API image location (comes from script 02 usually)
+DESTINATION_REGISTRY=quay.io/mmartofe/spring-boot-bootstrap-project
+# TAG=0.0.1-SNAPSHOT
+# TAG=docker-build
+TAG=docker-build-RH
+
 # Create new network to communicate containers
 docker network create spring-network
 
@@ -28,4 +35,4 @@ docker run \
     --net=spring-network \
     --name=spring-boot-bootstrap-project \
     -e "JAVA_OPTS=-Dspring.profiles.active=docker -Xmx128m" \
-    -d quay.io/mmartofe/spring-boot-bootstrap-project:0.0.1-SNAPSHOT
+    -d "$DESTINATION_REGISTRY":"$TAG"
