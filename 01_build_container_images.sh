@@ -27,4 +27,3 @@ docker build \
 docker build  \
     -f ./dockerfiles/Dockerfile-RH \
     -t "$DESTINATION_REGISTRY":"$TAG_DOCKER_RH" .
-
