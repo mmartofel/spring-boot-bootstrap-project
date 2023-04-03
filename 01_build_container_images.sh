@@ -1,3 +1,5 @@
+# Build application jar file
+./mvnw clean package -DskipTests
 
 # Build container image with Paketo buildpacks using Maven plugin
 mvn spring-boot:build-image -Dspring-boot.build-image.imageName=quay.io/mmartofe/spring-boot-bootstrap-project:0.0.1-SNAPSHOT
